@@ -11,21 +11,21 @@ Digital acknowledgement: *Moses Kamoga*
 
 ### Part 1 (45 pts)
 
-* step 1: i ran the command nc wattsamp.net 1337 on the terminal  
-  step 2: I was prompted to enter the IP address of the web i am trying to access. 
-  step 3: I decided to run the command '157.230.179.99 && ls -la' in the place where it says Enter Ip address,
+* **step 1**: i ran the command nc wattsamp.net 1337 on the terminal  
+*  **step 2**: I was prompted to enter the IP address of the web i am trying to access. 
+*  **step 3**: I decided to run the command '157.230.179.99 && ls -la' in the place where it says Enter Ip address,
           to find out how many directories that the web service is running on.
           I was able to break into the server and print the directories that the web service was running on. 
           Seeing the list of the directories, would be enable me to check one by one for a flag. 
           As, i have their names. 
-  step 4: Then after looking at the directories, i decide to check each directory for a file that may possibly contain a flag.
+*  **step 4**: Then after looking at the directories, i decide to check each directory for a file that may possibly contain a flag.
           running '157.230.179.99 & cd <directory name> && ls' on the terminal in the place where it says Enter Ip address
           This enabled me to check each and every directory to find out if there was a flag there. 
           With every directory, i executed this command. And if the directory was empty, it displayed no contents.
           Finally, after going through a bumch of directories.  
-  step 5: I found the file in the home directory called flag.txt
+*  **step 5**: I found the file in the home directory called flag.txt
           To inspect the file and figure out what the file contained, i continued to step 7.
-  step 6: I opened the file to view the flag by running the command '157.230.179.99 & cd home && cat flag.txt' in the place of Enter Ip Address
+*  **step 6**: I opened the file to view the flag by running the command '157.230.179.99 & cd home && cat flag.txt' in the place of Enter Ip Address
           This file contained the details of the flag. 
          
           Good! Here's your flag: CMSC389R-{p1ng_as_a_$erv1c3} 
