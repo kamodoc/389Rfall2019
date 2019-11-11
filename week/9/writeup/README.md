@@ -37,6 +37,9 @@ Digital acknowledgement: *Moses Kamoga*
    The file is a picture.
 
 6. greetz.fpff
+   checked the list file from wirehark which had a command of STOR
+   When i run the TCP stream, i realised there is a different file,
+   i did not store on the system.
 
 7. You can run a Nmap on your system and find out which ports are open.
    When you find these ports, you can determine if they need to be patched or not
@@ -51,7 +54,9 @@ i.    TIMESTAMP: 1553660105 (2019-03-27 00:15:05)
 
 ii.   Fl1nch
 
-iii.  SECTION TYPE: 1
+iii.  
+      
+      SECTION TYPE: 1
       SECTION LENGTH: 24
       Hey you, keep looking :) 
  
@@ -76,7 +81,9 @@ iii.  SECTION TYPE: 1
  
 
 
-iv.   CMSC389R-{h0pefully_y0u_didnt_grep_CMSC389R}
+iv.   
+       
+      CMSC389R-{h0pefully_y0u_didnt_grep_CMSC389R}
 
       CMSC389R-{hey_h3y_y0U_you_I_dont_like_your_base64_encoding}
 
