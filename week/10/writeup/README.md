@@ -30,7 +30,7 @@ Digital acknowledgement: *Moses Kamoga*
    The encryption key is derived using aes128 and md5hash. 
 
 5) The application ensures integrity by checking if the ciphertext hash from the file and the actual hash are the same.
-/*** look at 5 *****/
+ 
 
 6) The application checks for authenticity by checking if the key hash inside the file is equal to the hash provided by the key.
 
